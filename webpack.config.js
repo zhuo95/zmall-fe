@@ -20,6 +20,7 @@ var config = {
         'common':['./src/page/common/index.js'],
         'index':'./src/page/index/index.js',
         'login': './src/page/login/index.js',
+        'result': ['./src/page/result/index.js'],
     },
     output:{
         path:'./dist',
@@ -30,10 +31,20 @@ var config = {
         'jquery':'window.jQuery'
     },
     module:{
-      loaders:[
-                {test:/\.css$/, loader:ExtractTextPlugin.extract("style-loader","css-loader")},
-                { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
-            ]
+        loaders: [
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
+            { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
+            { test: /\.string$/, loader: 'html-loader'}
+        ]
+    },
+    resolve : {
+        alias : {
+            node_modules    : __dirname + '/node_modules',
+            util            : __dirname + '/src/util',
+            page            : __dirname + '/src/page',
+            service         : __dirname + '/src/service',
+            image           : __dirname + '/src/image'
+        }
     },
     plugins:[
         new webpack.optimize.CommonsChunkPlugin({
@@ -49,6 +60,7 @@ var config = {
             chunks: ['common','index']
         }),
         new HtmlWebpackPlugin(getHtmlConfig('login')),
+        new HtmlWebpackPlugin(getHtmlConfig('result')),
     ]
 };
 

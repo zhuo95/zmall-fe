@@ -1,6 +1,4 @@
-require('../common/index.js');
-require("./index.css");
-var $$ = require('jquery');
-console.log("hello js");
-$$('body').html("external");
 
+var _zm = require('util/zm.js');
+
+require('page/common/nav-simple/index.js');

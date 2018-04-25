@@ -4,7 +4,7 @@
   "description": "zmall",
   "main": "index.js",
   "scripts": {
-    "dev" : "set WEBPACK_ENV=dev && webpack-dev-server --inline --hot  --port 8088",
+    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --hot  --port 8088",
     "dist": "WEBPACK_ENV=online && webpack -p"
   },
   "author": "zz",
@@ -20,5 +20,7 @@
     "webpack": "^1.15.0",
     "webpack-dev-server": "^1.16.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "hogan": "^1.0.2"
+  }
 }

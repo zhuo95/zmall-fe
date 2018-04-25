@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= require('html-loader!./layout/head-common.html') %>
+	<title>Result</title>
+</head>
+<body>
+
+	<%= require('html-loader!./layout/nav-simple.html')%>
+
+	<div class="page-wrap w">
+		<div class="result-con register-success">
+			<h1 class="result-title">
+				Sign up Success!
+			</h1>
+			<div class="result-content">
+				<a class="link" href="./index.html">Back to homepage</a>
+			</div>
+		</div>
+
+		<div class="result-con  default-success">
+			<h1 class="result-title">
+				Success!
+			</h1>
+			<div class="result-content">
+				<a class="link" href="./index.html">Back to homepage</a>
+			</div>
+		</div>
+	</div>
+
+	<%= require('html-loader!./layout/footer.html')%>
+</body>
+</html>
