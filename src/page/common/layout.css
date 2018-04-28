@@ -49,6 +49,7 @@ input[type='checkbox']{
 }
 .link:hover{
 	color: #e80012;
+	text-decoration: none;
 }
 .link-text{
 	color: #999;

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --hot  --port 8088",
+    "dev1": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
     "dist": "WEBPACK_ENV=online && webpack -p"
   },
   "author": "zz",

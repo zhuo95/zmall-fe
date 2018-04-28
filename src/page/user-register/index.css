@@ -1,0 +1,31 @@
+.user-con{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.page-wrap{
+	padding: 40px 0;
+}
+
+.user-con .err-item{
+	position: relative;
+	padding: 4px 0 4px 40px;
+	margin-bottom: 10px;
+	border:1px solid red;
+	color: red;
+	background: #fde9e9;
+	display: none;
+}
+
+p.err-msg{
+	margin-bottom: 0px;
+}
+
+.user-con .err-item .err-icon{
+	position: absolute;
+	left: 14px;
+	top:50%;
+	font-size: 14px;
+	margin-top:-7px;
+}
+
