@@ -9,17 +9,17 @@ var navSide = {
 		navList:[
 			{name:'user-center',desc:'Account Center',href:'./user-center.html'},
 			{name:'order-list',desc:'My Order',href:'./order-list.html'},
-			{name:'pass-update',desc:'Change Password',href:'./pass-update.html'},
+			{name:'pass-update',desc:'Change Password',href:'./user-pass-update.html'},
 			{name:'about',desc:'About Zmall',href:'./about.html'}
 		]
 	},
-	init : function(option){
-		// 合并选项
-		$.extend(this.option,option);
-		this.renderNav();
-	},
-	//渲染导航菜单
-	 renderNav : function(){
+	 init : function(option){
+        // 合并选项
+        $.extend(this.option, option);
+        this.renderNav();
+    },
+    // 渲染导航菜单
+    renderNav : function(){
         // 计算active数据
         for(var i = 0, iLength = this.option.navList.length; i < iLength; i++){
             if(this.option.navList[i].name === this.option.name){

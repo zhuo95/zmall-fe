@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= require('html-loader!./layout/head-common.html') %>
+	<title>Result</title>
+</head>
+<body>
+
+	<%= require('html-loader!./layout/nav-simple.html')%>
+
+	<div class="page-wrap ">
+		<div class="w">
+			<div class="user-con">
+				<h3 class="user-con-title">Find Password</h3>
+				<hr>
+				<div class="err-item">
+					<i class="fa fa-minus-circle err-icon"></i>
+					<p class="err-msg">Error</p>
+				</div>
+				<form class="step-username step-con" target="nm_iframe">
+			 		<div class="form-group">
+			 			<input class="form-control" type="text" placeholder="Enter your username" id="username"></input>
+			 		</div>
+			 		<button class="btn btn-primary btn-block" id="submit-username">Next</button>
+				</form>
+
+				<form class="step-question step-con" target="nm_iframe">
+					<p class="user-step-text">Your question is:  <span class="question"></span></p>
+			 		<div class="form-group">
+			 			<input class="form-control" type="text" placeholder="Enter your answer" id="answer"></input>
+			 		</div>
+			 		<button class="btn btn-primary btn-block" id="submit-answer">Next</button>
+			 	</form>
+
+			 	<form class="step-password step-con" target="nm_iframe">
+			 		<p class="user-step-text">Enter your new password</p>
+			 		<div class="form-group">
+			 			<input class="form-control" type="text" placeholder="Reset your password" id="reset-pass"></input>
+			 		</div>
+			 		<button class="btn btn-primary btn-block" id="submit-password">Next</button>
+			 	</form>
+
+			 <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe> 
+			 <br>
+			 
+			</div>
+		</div>
+	</div>
+
+	<%= require('html-loader!./layout/footer.html')%>
+</body>
+</html>

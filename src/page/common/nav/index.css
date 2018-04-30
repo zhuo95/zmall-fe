@@ -6,3 +6,7 @@
 #islogin{
 	display: none;
 }
+
+.js-logout{
+	cursor: pointer;
+}

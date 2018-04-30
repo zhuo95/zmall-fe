@@ -29,9 +29,17 @@ p.err-msg{
 	margin-top:-7px;
 }
 
-.user-con .user-con-title-login{
-	width: 80px;
+.user-con .user-con-title{
+	width: 160px;
 	margin: 20px auto;
 }
 
+.user-con .user-step-text{
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.user-con .step-con{
+	display: none;
+}
 

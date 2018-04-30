@@ -108,7 +108,7 @@ var _user = {
     logout : function(resolve, reject){
         _zm.request({
             url     : _zm.getServerUrl('/user/logout.do'),
-            method  : 'POST',
+            method  : 'GET',
             success : resolve,
             error   : reject
         });

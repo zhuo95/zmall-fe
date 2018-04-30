@@ -21,6 +21,10 @@ var config = {
         'index':'./src/page/index/index.js',
         'user-login': './src/page/user-login/index.js',
         'user-register': './src/page/user-register/index.js',
+        'user-pass-reset': './src/page/user-pass-reset/index.js',
+        'user-pass-update': './src/page/user-pass-update/index.js',
+        'user-center': './src/page/user-center/index.js',
+        'user-center-update': './src/page/user-center-update/index.js',
         'result': ['./src/page/result/index.js'],
     },
     output:{
@@ -63,6 +67,10 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-login')),
         new HtmlWebpackPlugin(getHtmlConfig('result')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center-update')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-update')),
     ]
 };
 

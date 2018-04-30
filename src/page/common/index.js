@@ -6,7 +6,7 @@ require('./nav-simple/index.js');
 require('./nav/index.js');
 var navSide = require('./nav-side/index.js');
 
-navSide.init({
-	name:'user-center'
+ navSide.init({
+    name: ''
 });
 
