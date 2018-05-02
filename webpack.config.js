@@ -19,6 +19,7 @@ var config = {
     entry: {
         'common':['./src/page/common/index.js'],
         'index':'./src/page/index/index.js',
+        'list':'./src/page/list/index.js',
         'user-login': './src/page/user-login/index.js',
         'user-register': './src/page/user-register/index.js',
         'user-pass-reset': './src/page/user-pass-reset/index.js',
@@ -64,6 +65,7 @@ var config = {
             hash : true,
             chunks: ['common','index']
         }),
+        new HtmlWebpackPlugin(getHtmlConfig('list')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login')),
         new HtmlWebpackPlugin(getHtmlConfig('result')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register')),
