@@ -30,8 +30,8 @@ var config = {
         'result': ['./src/page/result/index.js'],
     },
     output:{
-        path:'./dist',
-        publicPath:'/dist',
+        path:__dirname+'/dist/',
+        publicPath:'dev' === WEBPACK_ENV ? '/dist/' : '//s.zhuo9529.com/mmall_fe/dist/',
         filename: 'js/[name].js'
     },
     externals:{
