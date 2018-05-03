@@ -14,3 +14,7 @@
 	</li>
 
 {{/list}}
+{{^list}}
+	<p class="err-tip">cant find your items</p>
+{{/list}}
+

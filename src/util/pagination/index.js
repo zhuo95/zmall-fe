@@ -24,7 +24,7 @@ var Pagination = function(){
 };
 // 渲染分页组件
 Pagination.prototype.render = function(userOption){
-    // 合并选项
+    // 合并选项，先把default，放进去再把useroption放进去
     this.option = $.extend({}, this.defaultOption, userOption);
     // 判断容器是否为合法的jquery对象
     if(!(this.option.container instanceof jQuery)){
@@ -48,7 +48,7 @@ Pagination.prototype.getPaginationHtml = function(){
             ? option.pageNum + option.pageRange : option.pages;
     // 上一页按钮的数据
     pageArray.push({
-        name : '上一页',
+        name : 'previous',
         value : this.option.prePage,
         disabled : !this.option.hasPreviousPage
     });
@@ -62,7 +62,7 @@ Pagination.prototype.getPaginationHtml = function(){
     };
     // 下一页按钮的数据
     pageArray.push({
-        name : '下一页',
+        name : 'next',
         value : this.option.nextPage,
         disabled : !this.option.hasNextPage
     });

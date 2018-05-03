@@ -59,7 +59,6 @@ var page = {
             _this.loadList();
         });
 	},
-	//加载list
 	    // 加载list数据
     loadList : function(){
         var _this       = this,
@@ -84,14 +83,15 @@ var page = {
                 pageNum         : res.pageNum,
                 pages           : res.pages
             });
-        }, function(errMsg){
-            _zm.errorTips(errMsg);
+        }, function(msg){
+            _zm.errorTips(msg);
         });
     },
     // 加载分页信息
     loadPagination : function(pageInfo){
         var _this = this;
         this.pagination ? '' : (this.pagination = new Pagination());
+        //对于空对象，先把pageinfo 放进去，再把后面放进去
         this.pagination.render($.extend({}, pageInfo, {
             container : $('.pagination'),
             onSelectPage : function(pageNum){
